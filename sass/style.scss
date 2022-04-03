@@ -13,6 +13,7 @@
 }
 @media (min-width: $desktop) {
   .wrapper {
+    position: relative;
     margin: 0 auto;
     width: 1080px;
     .banner {
@@ -63,6 +64,7 @@
             // background-color: yellow;
             padding: 5px;
             cursor: pointer;
+            transition: 0.3s;
           }
           li:hover {
             color: white;
@@ -153,7 +155,7 @@
         justify-content: center;
         #infoUser {
           align-self: center;
-          width: 300px;
+          width: 350px;
           height: 300px;
           margin-top: 50px;
           // border: 0.1px solid black;
@@ -165,7 +167,7 @@
           }
           p {
             margin: 20px 10px 10px;
-            font-size: 10px;
+            font-size: 13px;
           }
         }
         .footer {
