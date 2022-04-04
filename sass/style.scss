@@ -6,39 +6,35 @@
   overflow-x: hidden;
 }
 @media (min-width: $mobile) {
-}
-@media (min-width: $xlMobile) {
-}
-@media (min-width: $tablet) {
-}
-@media (min-width: $desktop) {
   .wrapper {
     position: relative;
     margin: 0 auto;
-    width: 1080px;
+    width: $mobile;
     .banner {
       overflow-y: hidden;
       width: 100%;
-      height: 15vh;
-      // border: 0.1px dotted red;
       font-family: $font-Maven-Pro;
       padding: 3px;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       #nameUser {
         text-align: center;
-        // background-color: pink;
-        width: 400px;
+        background-color: $background-layer3;
+        width: 100%;
+        height: 15vh;
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 20px;
         #square {
           width: 18px;
           height: 18px;
+          margin-right: 15px;
+
           background-color: $button-blue;
         }
         p {
@@ -47,22 +43,379 @@
             text-transform: capitalize;
             font-size: 20px;
             color: $font-black;
-            margin-right: 5px;
+            margin-right: 20px;
+          }
+          span {
+            margin-right: 0;
           }
         }
       }
       #menu {
-        margin-left: 200px;
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        ul {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          list-style: none;
+          gap: 40px;
+          li {
+            margin: 0 auto;
+            border-radius: 20px;
+            padding: 3px;
+            cursor: pointer;
+            transition: 0.3s;
+          }
+          li:hover {
+            color: white;
+            background-color: $button-blue;
+          }
+        }
+      }
+    }
+    .columns {
+      display: flex;
+      flex-direction: column;
+
+      #columnLeft {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .boxPicture {
+          text-align: center;
+          width: 100%;
+          background-color: $background-layer3;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          .picture {
+            margin: 20px auto 0;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            background-image: $foto;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+          }
+          .boxPicture,
+          p {
+            margin-top: 30px;
+            font-family: $font-Open-Sans;
+            color: $font-black;
+          }
+          #user {
+            font-family: $font-Maven-Pro;
+            font-size: 25px;
+            font-weight: 700;
+            text-transform: capitalize;
+          }
+          #blueLine {
+            margin: 15px auto 0;
+            width: 250px;
+            height: 2px;
+            background-color: $button-blue;
+          }
+          #jobUser {
+            font-family: $font-Maven-Pro;
+            font-size: 25px;
+            color: $font-grey;
+            margin-bottom: 15px;
+          }
+        }
+        .whiteRibbon {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5vw;
+          #icons {
+            padding: 15px;
+            font-size: 25px;
+            color: $font-black;
+          }
+        }
+      }
+      #columnRight {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        #infoUser {
+          margin-top: 15vh;
+          align-self: center;
+          width: 350px;
+          height: 450px;
+          background-color: white;
+          text-align: center;
+          font-family: $font-Roboto;
+          h1 {
+            font-size: 90px;
+          }
+          p {
+            margin: 20px 10px 10px;
+            font-size: 15px;
+          }
+        }
+        .footer {
+          background-color: $background-layer3;
+          width: 100%;
+          height: 10vh;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 30px;
+          p {
+            margin-right: 50px;
+            font-family: $font-Roboto;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $xlMobile) {
+  .wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: $xlMobile;
+    .banner {
+      overflow-y: hidden;
+      width: 100%;
+      font-family: $font-Maven-Pro;
+      padding: 3px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      #nameUser {
+        text-align: center;
+        background-color: $background-layer3;
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        #square {
+          width: 18px;
+          height: 18px;
+          margin-right: 15px;
+
+          background-color: $button-blue;
+        }
+        p {
+          font-family: $font-Maven-Pro;
+          strong {
+            text-transform: capitalize;
+            font-size: 20px;
+            color: $font-black;
+            margin-right: 20px;
+          }
+          span {
+            margin-right: 0;
+          }
+        }
+      }
+      #menu {
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        ul {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          list-style: none;
+          gap: 40px;
+          li {
+            margin: 0 auto;
+            border-radius: 20px;
+            padding: 3px;
+            cursor: pointer;
+            transition: 0.3s;
+          }
+          li:hover {
+            color: white;
+            background-color: $button-blue;
+          }
+        }
+      }
+    }
+    .columns {
+      display: flex;
+      flex-direction: column;
+
+      #columnLeft {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .boxPicture {
+          text-align: center;
+          width: 100%;
+          background-color: $background-layer3;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          .picture {
+            margin: 20px auto 0;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            background-image: $foto;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+          }
+          .boxPicture,
+          p {
+            margin-top: 30px;
+            font-family: $font-Open-Sans;
+            color: $font-black;
+          }
+          #user {
+            font-family: $font-Maven-Pro;
+            font-size: 25px;
+            font-weight: 700;
+            text-transform: capitalize;
+          }
+          #blueLine {
+            margin: 15px auto 0;
+            width: 250px;
+            height: 2px;
+            background-color: $button-blue;
+          }
+          #jobUser {
+            font-family: $font-Maven-Pro;
+            font-size: 25px;
+            color: $font-grey;
+            margin-bottom: 15px;
+          }
+        }
+        .whiteRibbon {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5vw;
+          #icons {
+            padding: 15px;
+            font-size: 25px;
+            color: $font-black;
+          }
+        }
+      }
+      #columnRight {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        #infoUser {
+          margin-top: 15vh;
+          align-self: center;
+          width: 350px;
+          height: 450px;
+          background-color: white;
+          text-align: center;
+          font-family: $font-Roboto;
+          h1 {
+            font-size: 90px;
+          }
+          p {
+            margin: 20px 10px 10px;
+            font-size: 15px;
+          }
+        }
+        .footer {
+          background-color: $background-layer3;
+          width: 100%;
+          height: 10vh;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 30px;
+          p {
+            margin-right: 50px;
+            font-family: $font-Roboto;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $tablet) {
+  .wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: $tablet;
+    .banner {
+      overflow-y: hidden;
+      width: 100%;
+      height: 83px;
+      font-family: $font-Maven-Pro;
+      padding: 3px;
+      display: flex;
+      flex-direction: row;
+      #nameUser {
+        text-align: center;
+        background-color: $background-layer1;
+        width: 400px;
+        height: 83px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        #square {
+          width: 18px;
+          height: 18px;
+          margin-right: 20px;
+
+          background-color: $button-blue;
+        }
+        p {
+          font-family: $font-Maven-Pro;
+          font-size: 20px;
+          strong {
+            text-transform: capitalize;
+            font-size: 20px;
+            color: $font-black;
+          }
+          span {
+            display: none;
+            margin-right: 0;
+          }
+        }
+        #secondP {
+          margin-left: 20px;
+        }
+      }
+      #menu {
+        width: 500px;
+        height: 83px;
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: flex-end;
         ul {
           display: flex;
           flex-wrap: nowrap;
           list-style: none;
-          gap: 40px;
+          gap: 10px;
+          margin-right: 20px;
           li {
             text-align: center;
             border-radius: 20px;
-            // background-color: yellow;
-            padding: 5px;
+            padding: 3px;
             cursor: pointer;
             transition: 0.3s;
           }
@@ -84,7 +437,187 @@
         .boxPicture {
           position: absolute;
           z-index: 1;
-          top: 100px;
+          top: 150px;
+          left: 100px;
+          text-align: center;
+          width: 220px;
+          height: 300px;
+          box-shadow: 0 0 5px 1px $font-grey;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          .picture {
+            margin: 20px auto 0;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background-image: $foto;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+          }
+          .boxPicture,
+          p {
+            margin-top: 10px;
+            font-family: $font-Open-Sans;
+            color: $font-black;
+          }
+          #user {
+            font-family: $font-Maven-Pro;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: capitalize;
+          }
+          #blueLine {
+            margin: 15px auto 0;
+            width: 50px;
+            height: 2px;
+            background-color: $button-blue;
+          }
+          #jobUser {
+            font-family: $font-Maven-Pro;
+            font-size: 18px;
+            color: $font-grey;
+            margin-bottom: 5px;
+          }
+        }
+        .whiteRibbon {
+          width: 100%;
+          height: 71px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 3vw;
+          #icons {
+            padding: 5px;
+            font-size: 18px;
+            color: $font-black;
+          }
+        }
+      }
+      #columnRight {
+        width: 70%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        #infoUser {
+          position: absolute;
+          z-index: 1;
+          top: 150px;
+          left: 300px;
+          align-self: center;
+          width: 350px;
+          height: 380px;
+          margin-top: 50px;
+          margin-left: 50px;
+          text-align: center;
+          font-family: $font-Roboto;
+          h1 {
+            font-size: 90px;
+          }
+          p {
+            margin: 20px 10px 10px;
+            font-size: 15px;
+          }
+        }
+        .footer {
+          width: 100%;
+          height: 100px;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 30px;
+          p {
+            font-family: $font-Roboto;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: $desktop;
+    .banner {
+      overflow-y: hidden;
+      width: 100%;
+      height: 15vh;
+      font-family: $font-Maven-Pro;
+      padding: 3px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      #nameUser {
+        text-align: center;
+        // background-color: pink;
+        width: 400px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        #square {
+          width: 18px;
+          height: 18px;
+          background-color: $button-blue;
+        }
+        p {
+          font-family: $font-Maven-Pro;
+          margin-left: 5px;
+          font-size: 20px;
+          strong {
+            text-transform: capitalize;
+            font-size: 20px;
+            color: $font-black;
+            margin-right: 5px;
+          }
+          span {
+            margin-right: 0;
+          }
+        }
+      }
+      #menu {
+        margin-left: 50px;
+        margin-right: 30px;
+        ul {
+          display: flex;
+          flex-wrap: nowrap;
+          list-style: none;
+          // gap: 40px;
+          li {
+            text-align: center;
+            border-radius: 20px;
+            // background-color: yellow;
+            padding: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+          }
+          li:hover {
+            color: white;
+            background-color: $button-blue;
+          }
+        }
+      }
+    }
+    .columns {
+      display: flex;
+      flex-direction: row;
+
+      #columnLeft {
+        background-color: $background-layer2;
+        width: 30%;
+        height: 100vh;
+        .boxPicture {
+          position: absolute;
+          z-index: 1;
+          top: 170px;
           left: 200px;
           text-align: center;
           width: 250px;
@@ -131,7 +664,7 @@
         }
         .whiteRibbon {
           width: 100%;
-          height: 71px;
+          height: 60px;
           // background-color: $background-layer1;
           display: flex;
           justify-content: center;
@@ -146,20 +679,21 @@
         }
       }
       #columnRight {
-        // background-color: rgba(255, 192, 203, 0.442);
-        // border: 0.1px solid black;
         width: 70%;
         height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         #infoUser {
+          position: absolute;
+          z-index: 1;
+          top: 170px;
+          left: 450px;
           align-self: center;
           width: 350px;
-          height: 300px;
+          height: 380px;
           margin-top: 50px;
-          // border: 0.1px solid black;
-          background-color: white;
+          // background-color: rgb(252, 208, 208);
           text-align: center;
           font-family: $font-Roboto;
           h1 {
@@ -167,26 +701,20 @@
           }
           p {
             margin: 20px 10px 10px;
-            font-size: 13px;
+            font-size: 15px;
           }
         }
         .footer {
           width: 100%;
-          height: 20vh;
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-end;
-          align-items: flex-end;
+          height: 100px;
           gap: 30px;
           p {
             margin-right: 50px;
             font-family: $font-Roboto;
-            font-size: 12px;
+            font-size: 15px;
           }
         }
       }
     }
   }
-}
-@media (min-width: $xlDesktop) {
 }
