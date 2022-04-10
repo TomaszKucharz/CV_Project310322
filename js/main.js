@@ -2,9 +2,6 @@ const liAboutMe = document.getElementById(`liAboutMe`);
 const liResume = document.getElementById(`liResume`);
 const liProject = document.getElementById(`liProject`);
 const liContact = document.getElementById(`liContact`);
-// const infoTab = ["text do okna textAboutMe"];
-// const resumeTab = ["text do okna textAboutMe"];
-// const contactTab = ["text do okna textAboutMe"];
 const infoUser = document.getElementById(`infoUser`);
 const P1Tab = [
   "Jako człowiek o ścisłym umyśle a zarazem pasjonat języków programowania dobrze odnajduję się w zakamarkach kodowania.",
@@ -185,14 +182,14 @@ liResume.addEventListener(
 
 // ******************************
 
-liProject.addEventListener(
-  `click`,
-  (showProject = () => {
-    setInterval(() => {
-      infoUser.textContent = "zerknij na moją strone www";
-    }, 2000);
-  })
-);
+// liProject.addEventListener(
+//   `click`,
+//   (showProject = () => {
+//     setInterval(() => {
+//       infoUser.textContent = "zerknij na moją strone www";
+//     }, 2000);
+//   })
+// );
 
 // ******************************
 
