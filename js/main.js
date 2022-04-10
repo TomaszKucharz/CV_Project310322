@@ -2,16 +2,16 @@ const liAboutMe = document.getElementById(`liAboutMe`);
 const liResume = document.getElementById(`liResume`);
 const liProject = document.getElementById(`liProject`);
 const liContact = document.getElementById(`liContact`);
-const infoTab = ["text do okna textAboutMe"];
-const resumeTab = ["text do okna textAboutMe"];
-const contactTab = ["text do okna textAboutMe"];
+// const infoTab = ["text do okna textAboutMe"];
+// const resumeTab = ["text do okna textAboutMe"];
+// const contactTab = ["text do okna textAboutMe"];
 const infoUser = document.getElementById(`infoUser`);
 const P1Tab = [
-  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error facere nobis quo esse minima? Cupiditate tempore quasi quam. Magni veniam similique, aliquid nulla exercitationem vel voluptatem autem dolor totam ut!",
+  "Jako człowiek o ścisłym umyśle a zarazem pasjonat języków programowania dobrze odnajduję się w zakamarkach kodowania.",
+  " Choć kiedyś sam front-end był dla mnie odległy, to rozwój wyżej wspomnianych technologii i związanych z nią możliwości pochłonął moją uwagę a kiedy postanowiłem spróbować to stało się to moją wielką pasją.",
+  " Teraz chętnie się nią dzielę. Prywatnie: żeglarz, miłośnik szerokich wód i morskich przygód. ",
 ];
-const P2Tab = [
-  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error facere nobis quo esse minima? Cupiditate tempore quasi quam. Magni veniam similique, aliquid nulla exercitationem vel voluptatem autem dolor totam ut!",
-];
+const P2Tab = [];
 const P1TabResume = [
   "W 2020 roku podjąłem decyzję w życiu zawodowym, zmiany profilu na to co zawsze mnie kusiło i w czym czułem się dobrze - programowanie. W tym celu, skupiłem moje szkolenie i zdobywanie wiedzy na frontend i programowaniu w JavaScript. Do tej pory ukończyłem n/w szkolenia. Cały czas jednak poszerzam swoje umiejętności by nadążyć za oczekiwaniami branżowymi. ",
 ];
@@ -39,7 +39,7 @@ liAboutMe.addEventListener(
   (showInfo = () => {
     infoUser.innerHTML = "";
     const elementh1_AboutMe = document.createElement(`h1`);
-    elementh1_AboutMe.textContent = "dzień dobry!";
+    elementh1_AboutMe.textContent = "";
     elementh1_AboutMe.style.marginTop = "20px";
     elementh1_AboutMe.style.fontSize = "30px";
     const elementp_AboutMe = document.createElement(`p`);
@@ -60,6 +60,7 @@ liResume.addEventListener(
   `click`,
   (showResume = () => {
     infoUser.innerHTML = "";
+    infoUser.style.fontSize = "15px";
     const elementh3_Resume = document.createElement(`h3`);
     elementh3_Resume.classList.add(`elementH3`);
     elementh3_Resume.textContent = "Branża IT, od 2020";
@@ -181,7 +182,9 @@ liResume.addEventListener(
 liProject.addEventListener(
   `click`,
   (showProject = () => {
-    infoUser.textContent = "";
+    setInterval(() => {
+      infoUser.textContent = "zerknij na moją strone www";
+    }, 2000);
   })
 );
 
@@ -191,11 +194,30 @@ liContact.addEventListener(
   `click`,
   (showContact = () => {
     infoUser.textContent = "";
-    const contactH1 = document.querySelector(`#infoUser h1`);
-    const contactP = document.querySelectorAll(`#infoUser a`)[0];
-    contactH1.style.fontSize = "30px";
-    contactH1.style.margineTop = "30px";
-    contactH1.textContent = "adres e-mail:";
-    contactP.textContent = "tkucharz@frontendwebsite.com";
+    const emailH3 = document.createElement(`h3`);
+    emailH3.style.marginTop = "8vh";
+    emailH3.textContent = "e-mail:";
+    const emailP = document.createElement(`p`);
+    emailP.textContent = "tkucharz@frontendwebsite.com";
+    const phoneH3 = document.createElement(`h3`);
+    phoneH3.style.marginTop = "5vh";
+    phoneH3.textContent = "phone:";
+    const phoneP = document.createElement(`p`);
+    phoneP.textContent = "+48 609 994 309";
+    const linkedH3 = document.createElement(`h3`);
+    linkedH3.style.marginTop = "5vh";
+    linkedH3.style.marginBottom = "20px";
+    linkedH3.textContent = "linked:";
+    const linkedP = document.createElement(`a`);
+    linkedP.style.marginTop = "5vh";
+    linkedP.href = "https://www.linkedin.com/in/tomasz-kucharz-a40707228/";
+    linkedP.textContent = "linked";
+
+    infoUser.append(emailH3);
+    infoUser.append(emailP);
+    infoUser.append(phoneH3);
+    infoUser.append(phoneP);
+    infoUser.append(linkedH3);
+    infoUser.append(linkedP);
   })
 );
