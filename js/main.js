@@ -207,20 +207,20 @@ liContact.addEventListener(
     phoneH3.textContent = "phone:";
     const phoneP = document.createElement(`p`);
     phoneP.textContent = "+48 609 994 309";
-    const linkedH3 = document.createElement(`h3`);
-    linkedH3.style.marginTop = "5vh";
-    linkedH3.style.marginBottom = "20px";
-    linkedH3.textContent = "linked:";
-    const linkedP = document.createElement(`a`);
-    linkedP.style.marginTop = "5vh";
-    linkedP.href = "https://www.linkedin.com/in/tomasz-kucharz-a40707228/";
-    linkedP.textContent = "linked";
+    // const linkedH3 = document.createElement(`h3`);
+    // linkedH3.style.marginTop = "5vh";
+    // linkedH3.style.marginBottom = "20px";
+    // linkedH3.textContent = "linked:";
+    // const linkedP = document.createElement(`a`);
+    // linkedP.style.marginTop = "5vh";
+    // linkedP.href = "https://www.linkedin.com/in/tomasz-kucharz-a40707228/";
+    // linkedP.textContent = "linked";
 
     infoUser.append(emailH3);
     infoUser.append(emailP);
     infoUser.append(phoneH3);
     infoUser.append(phoneP);
-    infoUser.append(linkedH3);
-    infoUser.append(linkedP);
+    // infoUser.append(linkedH3);
+    // infoUser.append(linkedP);
   })
 );
