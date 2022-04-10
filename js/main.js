@@ -215,7 +215,6 @@ liContact.addEventListener(
     // linkedP.style.marginTop = "5vh";
     // linkedP.href = "https://www.linkedin.com/in/tomasz-kucharz-a40707228/";
     // linkedP.textContent = "linked";
-
     infoUser.append(emailH3);
     infoUser.append(emailP);
     infoUser.append(phoneH3);
