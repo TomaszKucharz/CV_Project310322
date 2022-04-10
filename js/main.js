@@ -8,10 +8,13 @@ const liContact = document.getElementById(`liContact`);
 const infoUser = document.getElementById(`infoUser`);
 const P1Tab = [
   "Jako człowiek o ścisłym umyśle a zarazem pasjonat języków programowania dobrze odnajduję się w zakamarkach kodowania.",
+];
+const P2Tab = [
   " Choć kiedyś sam front-end był dla mnie odległy, to rozwój wyżej wspomnianych technologii i związanych z nią możliwości pochłonął moją uwagę a kiedy postanowiłem spróbować to stało się to moją wielką pasją.",
+];
+const P3Tab = [
   " Teraz chętnie się nią dzielę. Prywatnie: żeglarz, miłośnik szerokich wód i morskich przygód. ",
 ];
-const P2Tab = [];
 const P1TabResume = [
   "W 2020 roku podjąłem decyzję w życiu zawodowym, zmiany profilu na to co zawsze mnie kusiło i w czym czułem się dobrze - programowanie. W tym celu, skupiłem moje szkolenie i zdobywanie wiedzy na frontend i programowaniu w JavaScript. Do tej pory ukończyłem n/w szkolenia. Cały czas jednak poszerzam swoje umiejętności by nadążyć za oczekiwaniami branżowymi. ",
 ];
@@ -40,7 +43,7 @@ liAboutMe.addEventListener(
     infoUser.innerHTML = "";
     const elementh1_AboutMe = document.createElement(`h1`);
     elementh1_AboutMe.textContent = "";
-    elementh1_AboutMe.style.marginTop = "20px";
+    elementh1_AboutMe.style.marginTop = "40px";
     elementh1_AboutMe.style.fontSize = "30px";
     const elementp_AboutMe = document.createElement(`p`);
     elementp_AboutMe.classList.add(`elementP1`);
@@ -48,9 +51,12 @@ liAboutMe.addEventListener(
     const elementp2_AboutMe = document.createElement(`p`);
     elementp2_AboutMe.classList.add(`elementP2`);
     elementp2_AboutMe.textContent = P2Tab;
+    const elementp3_AboutMe = document.createElement(`p`);
+    elementp3_AboutMe.textContent = P3Tab;
     infoUser.append(elementh1_AboutMe);
     infoUser.append(elementp_AboutMe);
     infoUser.append(elementp2_AboutMe);
+    infoUser.append(elementp3_AboutMe);
   })
 );
 
