@@ -4,7 +4,7 @@ const liProject = document.getElementById(`liProject`);
 const liContact = document.getElementById(`liContact`);
 const infoUser = document.getElementById(`infoUser`);
 const P1Tab = [
-  "Jako człowiek o ścisłym umyśle a zarazem pasjonat języków programowania dobrze odnajduję się w zakamarkach kodowania.",
+  "Jako człowiek o ścisłym umyśle a zarazem pasjonat języków programowania dobrze odnajduję się w zakamarkach kodowania.", 
 ];
 const P2Tab = [
   " Choć kiedyś sam front-end był dla mnie odległy, to rozwój wyżej wspomnianych technologii i związanych z nią możliwości pochłonął moją uwagę a kiedy postanowiłem spróbować to stało się to moją wielką pasją.",
